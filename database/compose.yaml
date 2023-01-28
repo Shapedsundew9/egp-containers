@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    user: postgres
+    secrets:
+      - db-password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: [ "CMD", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    secrets:
+      - db-password
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=nobody@nowhere.com
+      - PGADMIN_DEFAULT_PASSWORD_FILE=/run/secrets/db-password
+      - PGADMIN_DISABLE_POSTFIX=true
+    ports:
+      - 8080:80
+
+volumes:
+  db-data:
+
+secrets:
+  db-password:
+    file: postgres/postgres-password.txt

@@ -1,0 +1,10 @@
+numpy
+tqdm
+cerberus
+psycopg2
+matplotlib
+pycairo
+PyGObject
+bokeh
+networkx
+scipy
