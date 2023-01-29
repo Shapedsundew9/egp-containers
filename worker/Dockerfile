@@ -18,17 +18,19 @@ RUN wget https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_
     && cd boost_1_81_0 && ./bootstrap.sh --prefix=/usr/ --with-python=python3.11 && CPLUS_INCLUDE_PATH=/usr/include/python3.11 ./b2 install
 
 # Graph-tool
-RUN cd /usr/src && python -m venv .venv && source .venv/bin/activate \
-    && apt install -y git python3-pip && pip install numpy pycairo scipy && cd /usr/src && export CXXFLAGS=-O3 \
+RUN cd /usr/src && python -m venv .venv && . .venv/bin/activate \
+    && apt install -y git python3-pip && pip install --no-cache-dir numpy pycairo scipy && cd /usr/src && export CXXFLAGS=-O3 \
     && git clone https://git.skewed.de/count0/graph-tool.git && cd graph-tool && ./autogen.sh
-RUN cd /usr/src/graph-tool && ./configure --with-python-module-path=/usr/src/.venv/lib64/python3.11/dist-packages --prefix=$HOME/.local && make install
+RUN cd /usr/src/graph-tool && . ../.venv/bin/activate \
+    && ./configure --with-python-module-path=/usr/src/.venv/lib64/python3.11/dist-packages --prefix=$HOME/.local && make install
 
-#FROM python:3.11-bullseye
+WORKDIR /usr/src
 
-#WORKDIR /usr/src/erasmus
+COPY requirements.txt ./
+RUN . .venv/bin/activate && apt update -y && apt -y install libpq5=14.5-0ubuntu0.22.04.1 && apt -y install libpq-dev \
+   && apt install -y libgirepository1.0-dev vim && pip install --no-cache-dir -r requirements.txt && rm requirements.txt \
+   && echo "source /usr/src/.venv/bin/activate" >> ~/.bashrc
 
-#COPY requirements.txt ./
-#RUN apt update -y && apt install -y libgirepository1.0-dev vim libboost-dev && pip install --no-cache-dir -r requirements.txt && rm requirements.txt
-
+CMD /bin/bash
 
 
