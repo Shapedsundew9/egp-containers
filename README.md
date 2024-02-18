@@ -7,4 +7,5 @@ Container configurations for Erasmus GP
 - pgadmin4 is running on http://localhost:8080
 - 'psql -d postgres -h localhost -U postgres' to connect via command line to the postgres server from container host.
 
+# Test
 
