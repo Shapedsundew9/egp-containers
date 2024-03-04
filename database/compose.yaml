@@ -1,7 +1,7 @@
 services:
   db:
     image: postgres
-    restart: always
+    restart: unless-stopped
     user: postgres
     secrets:
       - db-password
@@ -22,7 +22,7 @@ services:
       context: pgadmin4
       dockerfile: Dockerfile
     image: pgadmin4
-    restart: always
+    restart: unless-stopped
     secrets:
       - db-password
     environment:

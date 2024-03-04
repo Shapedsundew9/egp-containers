@@ -8,7 +8,10 @@ from pathlib import Path
 from sys import exit as sys_exit
 from typing import Any, Iterator, cast
 
-from egp_population.population_config import population_table_default_config, configure_populations
+from egp_population.population_config import (
+    population_table_default_config,
+    configure_populations,
+)
 from egp_population.egp_typing import PopulationConfigNorm
 from egp_stores.egp_typing import GenePoolConfigNorm
 from egp_stores.gene_pool import default_config as gp_default_config
@@ -50,29 +53,37 @@ config: WorkerConfigNorm = load_config(args.config_file)
 directory_path: str = config["problem_folder"]
 if exists(directory_path):
     if not access(directory_path, W_OK):
-        print(f"The 'problem_folder' directory '{directory_path}' exists but is not writable.")
+        print(
+            f"The 'problem_folder' directory '{directory_path}' exists but is not writable."
+        )
         sys_exit(1)
 else:
     # Create the directory if it does not exist
     try:
         Path(directory_path).mkdir(parents=True, exist_ok=True)
     except PermissionError as e:
-        print(f"The 'problem_folder' directory '{directory_path}' does not exist and cannot be created: {e}")
+        print(
+            f"The 'problem_folder' directory '{directory_path}' does not exist and cannot be created: {e}"
+        )
         sys_exit(1)
 
 # Check the verified problem definitions file
 problem_definitions: list[dict[str, Any]] = []
-problem_definitions_file: str = join(directory_path, 'egp_problems.json')
+problem_definitions_file: str = join(directory_path, "egp_problems.json")
 problem_definitions_file_exists: bool = exists(problem_definitions_file)
 if not problem_definitions_file_exists:
-    _logger.info(f"The egp_problems.json does not exist in {directory_path}'. Pulling from {config['problem_definitions']}")
-    response: Response = get(config['problem_definitions'], timeout=30)
-    if (problem_definitions_file_exists := response.status_code == 200):
+    _logger.info(
+        f"The egp_problems.json does not exist in {directory_path}'. Pulling from {config['problem_definitions']}"
+    )
+    response: Response = get(config["problem_definitions"], timeout=30)
+    if problem_definitions_file_exists := response.status_code == 200:
         with open(problem_definitions_file, "wb") as file:
             file.write(response.content)
         _logger.info("File 'egp_problems.json' downloaded successfully.")
     else:
-        _logger.warning(f"Failed to download the file. Status code: {response.status_code}.")
+        _logger.warning(
+            f"Failed to download the file. Status code: {response.status_code}."
+        )
 
 # Load the problems definitions file if it exists
 if problem_definitions_file_exists:
@@ -83,7 +94,11 @@ if problem_definitions_file_exists:
 gp_config: GenePoolConfigNorm = gp_default_config()
 base_name: str = config["gene_pool"]["table"]
 for key, table_config in cast(Iterator[tuple[str, TableConfigNorm]], gp_config.items()):
-    table_config["table"] = config["gene_pool"]["table"] if key == "gene_pool" else config["gene_pool"]["table"] + "_" + key
+    table_config["table"] = (
+        config["gene_pool"]["table"]
+        if key == "gene_pool"
+        else config["gene_pool"]["table"] + "_" + key
+    )
     table_config["database"] = config["databases"][config["gene_pool"]["database"]]
 
 # Define population configuration
@@ -100,12 +115,15 @@ if args.population_list:
     config["population"]["configs"] = list(p_table.select())
     with open("config.json", "w", encoding="utf8") as file_ptr:
         dump(config, file_ptr, indent=4, sort_keys=True)
-    print("Configuration updated with Gene Pool population configurations written to ./config.json")
+    print(
+        "Configuration updated with Gene Pool population configurations written to ./config.json"
+    )
     sys_exit(0)
 
 # Get the population configurations
-p_config_tuple: tuple[dict[int, PopulationConfigNorm], table, table] = configure_populations(
-    config["population"], problem_definitions, p_table_config)
+p_config_tuple: tuple[
+    dict[int, PopulationConfigNorm], table, table
+] = configure_populations(config["population"], problem_definitions, p_table_config)
 p_configs: dict[int, PopulationConfigNorm] = p_config_tuple[0]
 p_table: table = p_config_tuple[1]
 pm_table: table = p_config_tuple[2]
