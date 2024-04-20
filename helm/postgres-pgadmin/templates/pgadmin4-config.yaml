@@ -1,0 +1,5 @@
+pgadmin4:
+  serverDefinitions:
+    servers:
+      ErasmusServer:
+        Host: {{ printf "%s-postgresql.%s.svc.cluster.local" .Release.Name .Release.Namespace | quote }}

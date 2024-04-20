@@ -1,0 +1,10 @@
+pytest
+numpy
+tqdm
+cerberus
+psycopg2
+pympler
+pytest-cov
+black
+pylint
+pyright

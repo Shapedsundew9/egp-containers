@@ -1,0 +1,8 @@
+{"level":"info","msg":"Inject devspacehelper...","time":"2024-04-17T18:45:40-04:00"}
+{"level":"info","msg":"Inject devspacehelper...","time":"2024-04-17T19:26:24-04:00"}
+{"level":"info","msg":"Inject devspacehelper...","time":"2024-04-20T05:52:36-04:00"}
+{"level":"info","msg":"Start syncing","time":"2024-04-20T05:57:01-04:00"}
+{"level":"info","msg":"Downstream - Initial sync completed","time":"2024-04-20T05:57:02-04:00"}
+{"level":"info","msg":"Upstream - Upload 980 create change(s) (Uncompressed ~271273.96 KB)","time":"2024-04-20T05:57:03-04:00"}
+{"level":"info","msg":"Upstream - Successfully processed 980 change(s)","time":"2024-04-20T05:57:10-04:00"}
+{"level":"info","msg":"Upstream - Initial sync completed","time":"2024-04-20T05:57:12-04:00"}

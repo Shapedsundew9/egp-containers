@@ -1,0 +1,42 @@
+# Posgresql values
+# https://artifacthub.io/packages/helm/bitnami/postgresql
+postgresql:
+  enabled: true
+  global:
+    postgresql:
+      auth:
+        postgresPassword: "postgres"
+        username: "erasmus"
+        password: "erasmus"
+        database: "erasmus"
+
+# pgadmin4 values
+ # https://artifacthub.io/packages/helm/runix/pgadmin4
+pgadmin4:
+  enabled: true
+  persistentVolume.size: 1Gi
+  service:
+    type: NodePort
+  ingress:
+    enabled: true
+    ingressClassName: public
+    className: public
+    hosts:
+      - host: pgadmin4.erasmus-gp.local
+        paths:
+        - path: /
+          pathType: Prefix
+  serverDefinitions:
+    ## If true, server definitions will be created
+    enabled: true
+    servers:
+      ErasmusServer:
+        Name: "Erasmus DB Server"
+        Group: "Servers"
+        Port: 5432
+        Username: "erasmus"
+        Password: "erasmus"
+        MaintenanceDB: "postgres"
+        # Host: {{ printf "%s-postgresql.%s.svc.cluster.local" .Release.Name .Release.Namespace | quote }}
+        SSLMode: "prefer"
+

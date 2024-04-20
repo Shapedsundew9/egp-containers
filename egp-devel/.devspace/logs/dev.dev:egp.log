@@ -1,0 +1,70 @@
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-14T17:01:14-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-7545dff56-nqdvb has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:01:24-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-7545dff56-nqdvb has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:01:34-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-7545dff56-nqdvb has critical status: ErrImagePull. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:01:45-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-7545dff56-nqdvb has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:01:55-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-14T17:04:43-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-7545dff56-nqdvb has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:04:54-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-14T17:11:01-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-76bbbc7778-dztwm has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:11:11-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-76bbbc7778-dztwm has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:11:21-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-14T17:12:25-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-6b549f548-f65xs has critical status: InvalidImageName. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:12:36-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-14T17:13:14-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-6df8854ccb-hml8k has critical status: ErrImagePull. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:13:25-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-14T17:14:03-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-5cb44d444d-ndm5r has critical status: InvalidImageName. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:14:13-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-14T17:14:44-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-devspace-889dc4d86-4d5sk has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:14:54-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-14T17:20:22-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-59b96db544-n6mqx has critical status: InvalidImageName. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:20:32-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-14T17:21:00-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-59b96db544-tsqwq has critical status: InvalidImageName. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-14T17:21:10-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T18:27:22-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-59b96db544-49hb8: Failed to apply default image tag \"http://registry.local:32000/egp-devel:latest\": couldn't parse image name \"http://registry.local:32000/egp-devel:latest\": invalid reference format (InspectFailed)","time":"2024-04-17T18:27:32-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-59b96db544-49hb8: Error: InvalidImageName (Failed)","time":"2024-04-17T18:27:32-04:00"}
+{"level":"warning","msg":"dev:egp DevSpace still couldn't find any Pods that match the selector. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:27:32-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T18:28:20-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-599fcff8d5-grlcc has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:28:30-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T18:30:54-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-599fcff8d5-hgl6j has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:31:04-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-599fcff8d5-hgl6j has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:31:14-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-599fcff8d5-hgl6j has critical status: ErrImagePull. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:31:25-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T18:43:14-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-5978758744-q4gwj has critical status: ErrImagePull. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:43:24-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T18:45:24-04:00"}
+{"level":"warning","msg":"dev:egp DevSpace is waiting, because Pod egp-5cd8856f4f-ffwqv has status: ContainerCreating","time":"2024-04-17T18:45:34-04:00"}
+{"level":"info","msg":"dev:egp Selected pod egp-5cd8856f4f-ffwqv","time":"2024-04-17T18:45:39-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T18:46:43-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-599fcff8d5-4cb82 has critical status: ImagePullBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:46:53-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T18:51:05-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-5cd8856f4f-7rzh9 has critical status: CrashLoopBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:51:15-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-5cd8856f4f-7rzh9: Back-off restarting failed container container-0 in pod egp-5cd8856f4f-7rzh9_erasmus-gp(73957ddb-397a-4f03-a9a8-848d556e4860) (BackOff)","time":"2024-04-17T18:51:26-04:00"}
+{"level":"warning","msg":"dev:egp DevSpace is waiting, because Pod egp-5cd8856f4f-7rzh9 has status: Completed","time":"2024-04-17T18:51:26-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-5cd8856f4f-7rzh9 has critical status: CrashLoopBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:51:36-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-5cd8856f4f-7rzh9 has critical status: CrashLoopBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:51:46-04:00"}
+{"level":"warning","msg":"dev:egp DevSpace is waiting, because Pod egp-5cd8856f4f-7rzh9 has status: Completed","time":"2024-04-17T18:51:57-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T18:52:13-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-5cd8856f4f-4vp72 has critical status: CrashLoopBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:52:24-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-5cd8856f4f-4vp72: Back-off restarting failed container container-0 in pod egp-5cd8856f4f-4vp72_erasmus-gp(a1fd463b-7c78-47d8-9e3b-560ed3eb06ce) (BackOff)","time":"2024-04-17T18:52:34-04:00"}
+{"level":"warning","msg":"dev:egp DevSpace is waiting, because Pod egp-5cd8856f4f-4vp72 has status: Completed","time":"2024-04-17T18:52:34-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T18:59:22-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-5cd8856f4f-4vp72 has critical status: CrashLoopBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:59:32-04:00"}
+{"level":"warning","msg":"dev:egp Pod egp-5cd8856f4f-4vp72 has critical status: CrashLoopBackOff. DevSpace will continue waiting, but this operation might timeout","time":"2024-04-17T18:59:42-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T19:07:20-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T19:12:05-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-17T19:26:09-04:00"}
+{"level":"warning","msg":"dev:egp DevSpace is waiting, because Pod egp-5cd8856f4f-h5d2c has status: ContainerCreating","time":"2024-04-17T19:26:19-04:00"}
+{"level":"info","msg":"dev:egp Selected pod egp-5cd8856f4f-h5d2c","time":"2024-04-17T19:26:24-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-20T05:52:35-04:00"}
+{"level":"info","msg":"dev:egp Selected pod egp-5cd8856f4f-h5d2c","time":"2024-04-20T05:52:35-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-20T05:53:10-04:00"}
+{"level":"info","msg":"dev:egp Selected pod egp-5cd8856f4f-h5d2c","time":"2024-04-20T05:53:10-04:00"}
+{"level":"info","msg":"dev:egp Waiting for pod to become ready...","time":"2024-04-20T05:57:00-04:00"}
+{"level":"info","msg":"dev:egp Selected pod egp-5cd8856f4f-h5d2c","time":"2024-04-20T05:57:01-04:00"}
+{"level":"info","msg":"dev:egp sync  Sync started on: ~/Projects \u003c-\u003e ~/Projects","time":"2024-04-20T05:57:01-04:00"}
+{"level":"info","msg":"dev:egp sync  Waiting for initial sync to complete","time":"2024-04-20T05:57:01-04:00"}
+{"level":"info","msg":"dev:egp sync  Initial sync completed","time":"2024-04-20T05:57:12-04:00"}
+{"level":"info","msg":"dev:egp ssh   Port forwarding started on: 10946 -\u003e 8022","time":"2024-04-20T05:57:12-04:00"}
+{"level":"info","msg":"dev:egp proxy Port forwarding started on: 11163 \u003c- 10567","time":"2024-04-20T05:57:12-04:00"}
+{"level":"info","msg":"dev:egp ssh   Use 'ssh egp.egp-devel.devspace' to connect via SSH","time":"2024-04-20T05:57:13-04:00"}
